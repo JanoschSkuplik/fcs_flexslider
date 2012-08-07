@@ -1,0 +1,15 @@
+<?php
+
+/*
+ * Variablen stehen über $this->data zur Verfügung
+ */
+
+?>
+
+<!-- FlexSlider startTemplate -->
+
+<?php
+
+//$this->showTemplateVars();
+
+?>
