@@ -10,16 +10,17 @@
 <!-- FlexSlider endTemplate -->
 
 <?php
-$GLOBALS['TL_CSS'][] = 'plugins/flexslider/css/flexslider.css';
-$GLOBALS['TL_JAVASCRIPT'][] = 'plugins/flexslider/js/jquery.flexslider-min.js';
+if (!$this->startData['flexUseOwnCSS']):
+	$GLOBALS['TL_CSS'][] = 'assets/flexslider/css/flexslider-mg.css';
+endif;
+
+$GLOBALS['TL_JAVASCRIPT'][] = 'assets/flexslider/js/jquery.flexslider-min.js';
 
 
 ?>
 
 <script type="text/javascript">
 	$(window).load(function() {
-		$('#fcs_<?php echo $this->startData['id']; ?>').flexslider({
-			animation: "slide"
-		});
+		$('#fcs_<?php echo $this->startData['id']; ?>').flexslider({<?php echo $this->startData['loadData'] ? $this->startData['loadData'] : ''; ?>});
 	});
 </script>

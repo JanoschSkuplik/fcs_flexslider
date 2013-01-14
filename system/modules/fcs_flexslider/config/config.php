@@ -40,4 +40,6 @@ $GLOBALS['fcsSlider']['LISTTEMPLATE'] = true;
 $GLOBALS['fcsSlider']['SLIDERCLASS'] = 'flexslider';
 $GLOBALS['fcsSlider']['ITEMCLASS'] = 'test';
 
+$GLOBALS['TL_HOOKS']['fcsParseStartdata'][] = array('fcsFlexslider','fcsParseStartdata');
+
 ?>
