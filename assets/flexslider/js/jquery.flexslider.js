@@ -399,7 +399,7 @@
             slider.setProps(slider.h, "setTotal");
           } else {
             // SMOOTH HEIGHT:
-            if (vars.smoothHeight) methods.smoothHeight();
+            //if (vars.smoothHeight) methods.smoothHeight();
             slider.newSlides.width(slider.computedW);
             slider.setProps(slider.computedW, "setTotal");
           }
@@ -723,6 +723,10 @@
       // update directionNav
       if (vars.directionNav) methods.directionNav.update();
       
+    }
+    
+    slider.refresh = function() {
+	    methods.resize();
     }
     
     slider.addSlide = function(obj, pos) {
